@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGVSPORT | Saving Your Ass Since 1985 | Motorcycle Racing Gear</title>
+    <meta name="description" content="Premium motorcycle racing gear designed and tested by professional racers. Leather suits, jackets, gloves, and boots. ISO 9001 certified quality.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --black-light: #0A0A0A;
+            --black-lighter: #111111;
+            --gray-dark: #1A1A1A;
+            --gray: #2A2A2A;
+            --gray-mid: #444444;
+            --gray-light: #888888;
+            --gray-lighter: #AAAAAA;
+            --white: #FFFFFF;
+            --neon: #E3FC02;
+            --neon-dim: #B8CC00;
+            --neon-glow: rgba(227, 252, 2, 0.15);
+            --neon-glow-strong: rgba(227, 252, 2, 0.3);
+            --red: #FF3B3B;
+            --red-dark: #CC2F2F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.1;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--neon);
+            margin-bottom: 0.75rem;
+            padding: 0.375rem 1rem;
+            background: var(--neon-glow);
+            border: 1px solid rgba(227, 252, 2, 0.3);
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-transform: uppercase;
+        }
+
+        /* Announcement Bar */
+        .announcement {
+            background: var(--neon);
+            color: var(--black);
+            text-align: center;
+            padding: 0.625rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .announcement a {
+            color: var(--black);
+            text-decoration: underline;
+            margin-left: 0.5rem;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--black);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gray);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--white);
+            letter-spacing: 0.1em;
+        }
+
+        .logo-text span {
+            color: var(--neon);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--neon);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--neon);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-icon {
+            position: relative;
+            color: var(--white);
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-icon:hover {
+            color: var(--neon);
+        }
+
+        .nav-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 18px;
+            height: 18px;
+            background: var(--neon);
+            color: var(--black);
+            font-size: 0.7rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--neon);
+            color: var(--black);
+        }
+
+        .btn-primary:hover {
+            background: var(--white);
+            box-shadow: 0 0 30px var(--neon-glow-strong);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .btn-dark {
+            background: var(--black);
+            color: var(--neon);
+            border: 2px solid var(--neon);
+        }
+
+        .btn-dark:hover {
+            background: var(--neon);
+            color: var(--black);
+        }
+
+        .btn-cart {
+            background: var(--neon);
+            color: var(--black);
+            padding: 0.75rem 1.25rem;
+            font-family: 'Barlow', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-cart:hover {
+            background: var(--white);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--black);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                linear-gradient(135deg, var(--black) 0%, transparent 50%),
+                linear-gradient(-45deg, rgba(227, 252, 2, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 100px,
+                    rgba(227, 252, 2, 0.03) 100px,
+                    rgba(227, 252, 2, 0.03) 101px
+                );
+            pointer-events: none;
+        }
+
+        .hero-diagonal {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, var(--neon-glow) 100%);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease forwards 0.2s;
+        }
+
+        .hero-tag span {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--neon);
+        }
+
+        .hero-tag::before {
+            content: '';
+            width: 40px;
+            height: 2px;
+            background: var(--neon);
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            text-transform: uppercase;
+            line-height: 0.95;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.6s ease forwards 0.4s;
+        }
+
+        .hero h1 .highlight {
+            color: var(--neon);
+            display: block;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: var(--gray-lighter);
+            margin-bottom: 2rem;
+            max-width: 450px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease forwards 0.6s;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease forwards 0.8s;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(40px);
+            animation: fadeLeft 0.8s ease forwards 0.5s;
+        }
+
+        .hero-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--gray-dark) 0%, var(--black) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+        }
+
+        .hero-image-placeholder {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 8rem;
+            color: var(--gray);
+            opacity: 0.3;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: 2rem;
+            left: -2rem;
+            background: var(--neon);
+            color: var(--black);
+            padding: 1rem 1.5rem;
+            transform: skewX(-5deg);
+        }
+
+        .hero-badge-inner {
+            transform: skewX(5deg);
+        }
+
+        .hero-badge h4 {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .hero-badge span {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Featured Products */
+        .featured-products {
+            padding: 6rem 0;
+            background: var(--black-light);
+            position: relative;
+        }
+
+        .featured-products::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon), transparent);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--gray-dark);
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px var(--neon-glow);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 3;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .product-badge.sale {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .product-badge.new {
+            background: var(--neon);
+            color: var(--black);
+        }
+
+        .product-image {
+            position: relative;
+            height: 280px;
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image-placeholder {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--gray-mid);
+        }
+
+        .product-actions {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .product-card:hover .product-actions {
+            transform: translateY(0);
+        }
+
+        .product-actions .btn-cart {
+            flex: 1;
+        }
+
+        .product-action-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gray-dark);
+            border: 1px solid var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .product-action-icon:hover {
+            background: var(--neon);
+            border-color: var(--neon);
+        }
+
+        .product-action-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--white);
+            fill: none;
+        }
+
+        .product-action-icon:hover svg {
+            stroke: var(--black);
+        }
+
+        .product-info {
+            padding: 1.25rem;
+        }
+
+        .product-category {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--neon);
+            margin-bottom: 0.375rem;
+        }
+
+        .product-title {
+            font-family: 'Barlow', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-rating-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .product-rating-stars svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--neon);
+        }
+
+        .product-rating-count {
+            font-size: 0.75rem;
+            color: var(--gray-light);
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .product-price-current {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .product-price-original {
+            font-size: 0.9rem;
+            color: var(--gray-light);
+            text-decoration: line-through;
+        }
+
+        .products-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Why AGVSPORT */
+        .why-section {
+            padding: 6rem 0;
+            background: var(--black);
+            position: relative;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--gray-dark);
+            border: 1px solid var(--gray);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            border-color: var(--neon);
+            transform: translateY(-5px);
+        }
+
+        .why-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--neon-glow);
+            border: 1px solid var(--neon);
+            margin: 0 auto 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .why-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--neon);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .why-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-card p {
+            font-size: 0.9rem;
+            color: var(--gray-lighter);
+        }
+
+        /* Custom Suits Section */
+        .custom-suits {
+            padding: 6rem 0;
+            background: var(--gray-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .custom-suits::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(-45deg, var(--neon-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .custom-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .custom-image {
+            height: 450px;
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+        }
+
+        .custom-image-placeholder {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5rem;
+            color: var(--gray-mid);
+        }
+
+        .custom-text h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .custom-text h2 span {
+            color: var(--neon);
+        }
+
+        .custom-text > p {
+            font-size: 1.1rem;
+            color: var(--gray-lighter);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .custom-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .custom-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 500;
+        }
+
+        .custom-feature svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--neon);
+            fill: none;
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 6rem 0;
+            background: var(--black);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+        }
+
+        .category-card {
+            position: relative;
+            height: 300px;
+            background: var(--gray-dark);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .category-card:hover {
+            transform: scale(1.02);
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, var(--black) 100%);
+            z-index: 1;
+        }
+
+        .category-card:hover::before {
+            background: linear-gradient(180deg, transparent 20%, var(--neon-glow-strong) 100%);
+        }
+
+        .category-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover .category-icon {
+            color: var(--gray-mid);
+            transform: translate(-50%, -60%);
+        }
+
+        .category-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            z-index: 2;
+        }
+
+        .category-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+            transition: color 0.3s ease;
+        }
+
+        .category-card:hover .category-info h3 {
+            color: var(--neon);
+        }
+
+        .category-info span {
+            font-size: 0.85rem;
+            color: var(--gray-light);
+        }
+
+        /* The Joke Section - Subtle competitor roast */
+        .speed-section {
+            padding: 4rem 0;
+            background: var(--neon);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .speed-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -10%;
+            width: 120%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 40px,
+                rgba(0, 0, 0, 0.03) 40px,
+                rgba(0, 0, 0, 0.03) 80px
+            );
+            transform: skewX(-10deg);
+        }
+
+        .speed-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .speed-text h3 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: var(--black);
+            margin-bottom: 0.25rem;
+        }
+
+        .speed-text p {
+            font-size: 1rem;
+            color: var(--black);
+            opacity: 0.8;
+        }
+
+        .speed-divider {
+            width: 2px;
+            height: 60px;
+            background: var(--black);
+            opacity: 0.2;
+        }
+
+        .speed-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .speed-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--black);
+            fill: none;
+        }
+
+        .speed-icon span {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--black);
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 6rem 0;
+            background: var(--black-light);
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter h2 span {
+            color: var(--neon);
+        }
+
+        .newsletter > p {
+            color: var(--gray-lighter);
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.25rem;
+            font-family: 'Barlow', sans-serif;
+            font-size: 1rem;
+            background: var(--gray-dark);
+            border: 2px solid var(--gray);
+            color: var(--white);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--neon);
+        }
+
+        .newsletter-form input::placeholder {
+            color: var(--gray-light);
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--neon);
+            color: var(--black);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--white);
+        }
+
+        .newsletter-note {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--gray-light);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--black);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--gray);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: var(--gray-lighter);
+            margin-bottom: 1.5rem;
+            max-width: 280px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: var(--gray-dark);
+            border: 1px solid var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--neon);
+            border-color: var(--neon);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--white);
+            transition: fill 0.3s ease;
+        }
+
+        .footer-social a:hover svg {
+            fill: var(--black);
+        }
+
+        .footer-col h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.25rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.625rem;
+        }
+
+        .footer-col a {
+            font-size: 0.9rem;
+            color: var(--gray-lighter);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--neon);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: var(--gray-light);
+        }
+
+        .footer-payments {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer-payments span {
+            padding: 0.375rem 0.75rem;
+            background: var(--gray-dark);
+            border: 1px solid var(--gray);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-lighter);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .custom-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .category-card {
+                height: 200px;
+            }
+
+            .speed-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .speed-divider {
+                width: 60px;
+                height: 2px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        🔥 FREE SHIPPING ON ORDERS OVER $200 |
+        <a href="#">SHOP FLANNELS - 20% OFF</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <span class="logo-text">AGV<span>SPORT</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Racing Suits</a></li>
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Custom Suits</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="nav-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </div>
+                <div class="nav-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div class="nav-icon">
+                    <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count">3</span>
+                </div>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-diagonal"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-tag">
+                    <span>Designed by MotoAmerica Racers</span>
+                </div>
+                <h1>
+                    Saving Your
+                    <span class="highlight">Ass</span>
+                    Since 1985
+                </h1>
+                <p class="hero-description">Premium motorcycle racing gear engineered for the track and built for the street. ISO 9001 certified protection that professional racers trust.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">Shop Racing Suits</a>
+                    <a href="#" class="btn btn-outline">Build Custom Suit</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-image">
+                        <span class="hero-image-placeholder">🏍️</span>
+                    </div>
+                    <div class="hero-badge">
+                        <div class="hero-badge-inner">
+                            <h4>20% OFF</h4>
+                            <span>All Flannels</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Best Sellers</span>
+                <h2>Featured Gear</h2>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card reveal">
+                    <span class="product-badge sale">-20%</span>
+                    <div class="product-image">
+                        <span class="product-image-placeholder">🧥</span>
+                        <div class="product-actions">
+                            <button class="btn-cart">Add to Cart</button>
+                            <div class="product-action-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Racing Suits</span>
+                        <h3 class="product-title">Podium One-Piece Leather Suit</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span class="product-rating-count">(47)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">$799.99</span>
+                            <span class="product-price-original">$999.99</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card reveal">
+                    <span class="product-badge new">New</span>
+                    <div class="product-image">
+                        <span class="product-image-placeholder">🧤</span>
+                        <div class="product-actions">
+                            <button class="btn-cart">Add to Cart</button>
+                            <div class="product-action-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Gloves</span>
+                        <h3 class="product-title">Sport-X Carbon Knuckle Gloves</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span class="product-rating-count">(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">$149.99</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card reveal">
+                    <div class="product-image">
+                        <span class="product-image-placeholder">👢</span>
+                        <div class="product-actions">
+                            <button class="btn-cart">Add to Cart</button>
+                            <div class="product-action-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Boots</span>
+                        <h3 class="product-title">Apex Pro Racing Boots</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span class="product-rating-count">(63)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">$329.99</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card reveal">
+                    <span class="product-badge sale">-20%</span>
+                    <div class="product-image">
+                        <span class="product-image-placeholder">👔</span>
+                        <div class="product-actions">
+                            <button class="btn-cart">Add to Cart</button>
+                            <div class="product-action-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Flannels</span>
+                        <h3 class="product-title">Moto Armored Flannel - Black</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span class="product-rating-count">(124)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">$119.99</span>
+                            <span class="product-price-original">$149.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products-cta reveal">
+                <a href="#" class="btn btn-dark">Shop All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why AGVSPORT -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Why AGVSPORT</span>
+                <h2>Race-Proven Protection</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Since 1985</h3>
+                    <p>Nearly 40 years of protecting riders on the track and street.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    </div>
+                    <h3>ISO 9001 Certified</h3>
+                    <p>Manufactured to international quality management standards.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+                    </div>
+                    <h3>Racer Designed</h3>
+                    <p>Developed with MotoAmerica professionals and track day riders.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Premium Materials</h3>
+                    <p>Top-grain leather and CE-rated armor in every piece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Suits Section -->
+    <section class="custom-suits">
+        <div class="container">
+            <div class="custom-content">
+                <div class="custom-image reveal">
+                    <span class="custom-image-placeholder">🏁</span>
+                </div>
+                <div class="custom-text reveal">
+                    <span class="section-tag">Made For You</span>
+                    <h2>Custom <span>Racing</span> Suits</h2>
+                    <p>Build your dream suit with our custom program. Choose your colors, add your logos, and get a perfect fit tailored to your measurements.</p>
+                    <div class="custom-features">
+                        <div class="custom-feature">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="m9 11 3 3L22 4"/></svg>
+                            Custom colors & graphics
+                        </div>
+                        <div class="custom-feature">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="m9 11 3 3L22 4"/></svg>
+                            Made-to-measure fit
+                        </div>
+                        <div class="custom-feature">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="m9 11 3 3L22 4"/></svg>
+                            Premium kangaroo leather available
+                        </div>
+                        <div class="custom-feature">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="m9 11 3 3L22 4"/></svg>
+                            6-8 week delivery
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Start Your Custom Build</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Shop By Category</span>
+                <h2>Find Your Gear</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card reveal">
+                    <span class="category-icon">🏍️</span>
+                    <div class="category-info">
+                        <h3>Suits</h3>
+                        <span>32 Products</span>
+                    </div>
+                </div>
+                <div class="category-card reveal">
+                    <span class="category-icon">🧥</span>
+                    <div class="category-info">
+                        <h3>Jackets</h3>
+                        <span>28 Products</span>
+                    </div>
+                </div>
+                <div class="category-card reveal">
+                    <span class="category-icon">👖</span>
+                    <div class="category-info">
+                        <h3>Pants</h3>
+                        <span>18 Products</span>
+                    </div>
+                </div>
+                <div class="category-card reveal">
+                    <span class="category-icon">🧤</span>
+                    <div class="category-info">
+                        <h3>Gloves</h3>
+                        <span>24 Products</span>
+                    </div>
+                </div>
+                <div class="category-card reveal">
+                    <span class="category-icon">👢</span>
+                    <div class="category-info">
+                        <h3>Boots</h3>
+                        <span>16 Products</span>
+                    </div>
+                </div>
+                <div class="category-card reveal">
+                    <span class="category-icon">👔</span>
+                    <div class="category-info">
+                        <h3>Flannels</h3>
+                        <span>12 Products</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speed Section - The subtle competitor joke -->
+    <section class="speed-section">
+        <div class="container">
+            <div class="speed-content">
+                <div class="speed-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    <span>Race Pace</span>
+                </div>
+                <div class="speed-divider"></div>
+                <div class="speed-text">
+                    <h3>Why Run With The Herd When You Can Lead The Pack?</h3>
+                    <p>Some brands move at grazing speed. We move at race speed. No bison here—just pure performance.</p>
+                </div>
+                <div class="speed-divider"></div>
+                <div class="speed-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    <span>40 Years</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content reveal">
+                <span class="section-tag">Join The Crew</span>
+                <h2>Get <span>10% Off</span> Your First Order</h2>
+                <p>Subscribe for exclusive deals, new product drops, and racing content.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter-note">Unsubscribe anytime. We respect your inbox.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-text">AGV<span>SPORT</span></span>
+                    </a>
+                    <p>Premium motorcycle gear designed and tested by professional racers. Saving your ass since 1985.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/><circle cx="12" cy="12" r="3.5"/><circle cx="18.406" cy="5.594" r="1.44"/></svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Racing Suits</a></li>
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Gloves</a></li>
+                        <li><a href="#">Boots</a></li>
+                        <li><a href="#">Flannels</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Racers</a></li>
+                        <li><a href="#">Track Day Program</a></li>
+                        <li><a href="#">Dealer Locator</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AGVSPORT. All rights reserved. Saving Your Ass Since 1985.</p>
+                <div class="footer-payments">
+                    <span>Visa</span>
+                    <span>MC</span>
+                    <span>Amex</span>
+                    <span>PayPal</span>
+                    <span>Shop Pay</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        reveals.forEach(el => revealObserver.observe(el));
+
+        // Stagger grid items
+        document.querySelectorAll('.products-grid .product-card, .why-grid .why-card, .categories-grid .category-card').forEach((item, index) => {
+            item.style.transitionDelay = `${index * 0.1}s`;
+        });
+
+        // Add to cart animation
+        document.querySelectorAll('.btn-cart').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const cartCount = document.querySelector('.cart-count');
+                const currentCount = parseInt(cartCount.textContent);
+                cartCount.textContent = currentCount + 1;
+                cartCount.style.transform = 'scale(1.3)';
+                setTimeout(() => {
+                    cartCount.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thanks for subscribing! Check your email for your 10% off code.');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
