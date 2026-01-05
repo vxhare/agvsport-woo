@@ -432,18 +432,16 @@
             width: 100%;
             height: 500px;
             background: linear-gradient(135deg, var(--gray-dark) 0%, var(--black) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
             clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            overflow: hidden;
         }
 
-        .hero-image-placeholder {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 8rem;
-            color: var(--gray);
-            opacity: 0.3;
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
         .hero-badge {
@@ -531,16 +529,18 @@
             position: relative;
             height: 280px;
             background: var(--gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
         }
 
-        .product-image-placeholder {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 4rem;
-            color: var(--gray-mid);
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
         }
 
         .product-actions {
@@ -746,16 +746,14 @@
         .custom-image {
             height: 450px;
             background: var(--gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+            overflow: hidden;
         }
 
-        .custom-image-placeholder {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 5rem;
-            color: var(--gray-mid);
+        .custom-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .custom-text h2 {
@@ -830,23 +828,18 @@
         }
 
         .category-card:hover::before {
-            background: linear-gradient(180deg, transparent 20%, var(--neon-glow-strong) 100%);
+            background: linear-gradient(180deg, transparent 20%, rgba(227, 252, 2, 0.2) 100%);
         }
 
-        .category-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 4rem;
-            color: var(--gray);
-            transition: all 0.3s ease;
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
         }
 
-        .category-card:hover .category-icon {
-            color: var(--gray-mid);
-            transform: translate(-50%, -60%);
+        .category-card:hover img {
+            transform: scale(1.1);
         }
 
         .category-info {
@@ -1324,7 +1317,7 @@
             <div class="hero-visual">
                 <div class="hero-image-container">
                     <div class="hero-image">
-                        <span class="hero-image-placeholder">🏍️</span>
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=700&fit=crop" alt="Motorcycle racer in leather suit">
                     </div>
                     <div class="hero-badge">
                         <div class="hero-badge-inner">
@@ -1349,7 +1342,7 @@
                 <div class="product-card reveal">
                     <span class="product-badge sale">-20%</span>
                     <div class="product-image">
-                        <span class="product-image-placeholder">🧥</span>
+                        <img src="https://images.unsplash.com/photo-1615412704911-55d589229864?w=400&h=500&fit=crop" alt="Racing leather suit">
                         <div class="product-actions">
                             <button class="btn-cart">Add to Cart</button>
                             <div class="product-action-icon">
@@ -1380,7 +1373,7 @@
                 <div class="product-card reveal">
                     <span class="product-badge new">New</span>
                     <div class="product-image">
-                        <span class="product-image-placeholder">🧤</span>
+                        <img src="https://images.unsplash.com/photo-1621600411688-4be93cd68504?w=400&h=500&fit=crop" alt="Motorcycle gloves">
                         <div class="product-actions">
                             <button class="btn-cart">Add to Cart</button>
                             <div class="product-action-icon">
@@ -1409,7 +1402,7 @@
                 <!-- Product 3 -->
                 <div class="product-card reveal">
                     <div class="product-image">
-                        <span class="product-image-placeholder">👢</span>
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=500&fit=crop&sat=-100" alt="Racing boots">
                         <div class="product-actions">
                             <button class="btn-cart">Add to Cart</button>
                             <div class="product-action-icon">
@@ -1439,7 +1432,7 @@
                 <div class="product-card reveal">
                     <span class="product-badge sale">-20%</span>
                     <div class="product-image">
-                        <span class="product-image-placeholder">👔</span>
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop" alt="Moto flannel jacket">
                         <div class="product-actions">
                             <button class="btn-cart">Add to Cart</button>
                             <div class="product-action-icon">
@@ -1518,7 +1511,7 @@
         <div class="container">
             <div class="custom-content">
                 <div class="custom-image reveal">
-                    <span class="custom-image-placeholder">🏁</span>
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&h=700&fit=crop" alt="Custom racing suit">
                 </div>
                 <div class="custom-text reveal">
                     <span class="section-tag">Made For You</span>
@@ -1557,42 +1550,42 @@
             </div>
             <div class="categories-grid">
                 <div class="category-card reveal">
-                    <span class="category-icon">🏍️</span>
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=300&h=400&fit=crop" alt="Racing suits">
                     <div class="category-info">
                         <h3>Suits</h3>
                         <span>32 Products</span>
                     </div>
                 </div>
                 <div class="category-card reveal">
-                    <span class="category-icon">🧥</span>
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=400&fit=crop" alt="Motorcycle jackets">
                     <div class="category-info">
                         <h3>Jackets</h3>
                         <span>28 Products</span>
                     </div>
                 </div>
                 <div class="category-card reveal">
-                    <span class="category-icon">👖</span>
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=300&h=400&fit=crop" alt="Riding pants">
                     <div class="category-info">
                         <h3>Pants</h3>
                         <span>18 Products</span>
                     </div>
                 </div>
                 <div class="category-card reveal">
-                    <span class="category-icon">🧤</span>
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=300&h=400&fit=crop" alt="Motorcycle gloves">
                     <div class="category-info">
                         <h3>Gloves</h3>
                         <span>24 Products</span>
                     </div>
                 </div>
                 <div class="category-card reveal">
-                    <span class="category-icon">👢</span>
+                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&h=400&fit=crop" alt="Racing boots">
                     <div class="category-info">
                         <h3>Boots</h3>
                         <span>16 Products</span>
                     </div>
                 </div>
                 <div class="category-card reveal">
-                    <span class="category-icon">👔</span>
+                    <img src="https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=300&h=400&fit=crop" alt="Moto flannels">
                     <div class="category-info">
                         <h3>Flannels</h3>
                         <span>12 Products</span>
